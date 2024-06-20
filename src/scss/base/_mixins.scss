@@ -30,7 +30,45 @@
 
 //Fonts family
 
-@mixin OpenSans-600 {
-  font-family: "OpenSans", sans-serif;
+@mixin Arimo-700 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+}
+
+@mixin Arimo-700-i {
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin Arimo-600 {
+  font-family: "Arimo", sans-serif;
   font-weight: 600;
+}
+
+@mixin Arimo-600-i {
+  font-family: "Arimo", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@mixin Arimo-500 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 500;
+}
+
+@mixin Arimo-500-i {
+  font-family: "Arimo", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@mixin Arimo-400 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+}
+
+@mixin Arimo-300 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 300;
 }
