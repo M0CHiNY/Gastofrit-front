@@ -3,7 +3,7 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  font-size: clamp(0.875rem, 0.831rem + 0.1408vw, 1rem);
+  font-size: clamp(0.9375rem, 0.9155rem + 0.0704vw, 1rem);
   line-height: 1.15;
   height: 100%;
   @include Arimo-400;
@@ -16,9 +16,86 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1290px;
+  max-width: 1320px;
   margin: 0 auto;
   position: relative;
   padding: 0 15px;
 }
 
+.custom-btn {
+  width: fit-content;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: $btn-color;
+  color: #fff;
+  @include Arimo-500;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid $btn-color;
+  border-radius: 0.6em;
+  display: flex;
+  align-self: center;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: box-shadow 350ms ease-in-out, color 350ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #1A171B;
+    outline: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 40px 40px $btn-color inset;
+  }
+
+  svg {
+    margin-left: 15px;
+  }
+
+  &:hover svg path {
+    fill: #1A171B;
+  }
+
+  &--service-card {
+    margin-left: auto;
+    padding: 6px 15px;
+    align-self: flex-end;
+  }
+
+  &--main-category {
+    min-width: 260px;
+    justify-content: center;
+    background-color: #1A171B;
+    margin: 0 auto;
+  }
+}
+
+.custom__link {
+  width: fit-content;
+  position: relative;
+  padding: 15px;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 2px transparent inset, 0 0 0 0 transparent;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 #fff inset, 0 0 20px 1px #fff;
+  }
+
+  svg {
+    margin-left: 15px;
+  }
+}
+
+.title {
+  color: #fff;
+  font-size: clamp(1.375rem, 1.0669rem + 0.9859vw, 2.25rem);
+  @include Arimo-700;
+  text-align: center;
+  text-transform: uppercase;
+}
