@@ -1,0 +1,94 @@
+.main-category {
+    padding-top: 100px;
+
+    @include _1024 {
+        padding-top: 50px;
+    }
+
+    &__first-block {
+        padding: 40px 0;
+        background-image: url(../images/content/main-category-bg.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: repeat-y;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        max-width: 875px;
+        margin: 0 auto 25px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 30px 20px;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        max-width: 330px;
+        width: fit-content;
+
+        li,
+        p,
+        strong,
+        span {
+            margin-bottom: 5px;
+        }
+
+        li {
+            position: relative;
+            margin-left: 10px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 5px;
+                height: 5px;
+                background-color: #fff;
+                border-radius: 50%;
+                left: -10px;
+                top: 5px;
+            }
+        }
+    }
+
+    &__box-title {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    &__img {
+        width: 15px;
+        height: 15px;
+        object-fit: cover;
+        align-self: center;
+    }
+
+    &__caption {
+        @include Arimo-500;
+        color: $title-color;
+        font-size: clamp(1.1875rem, 1.0775rem + 0.3521vw, 1.5rem);
+    }
+
+    &__second-block {
+        padding: 50px 0 100px;
+
+        @include _1024 {
+            padding: 40px 0 50px;
+        }
+    }
+
+    &__product {
+        margin-bottom: 50px;
+
+        @include _1024 {
+            margin-bottom: 40px;
+        }
+    }
+}

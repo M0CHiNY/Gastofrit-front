@@ -1,0 +1,191 @@
+.subhed {
+    height: calc(100vh - 80px);
+    background-image: url('../images/content/subhed/bg-main.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include _620 {
+        height: auto;
+    }
+
+    &__wrap {
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 100px;
+
+        @include _1200 {
+            justify-content: space-around;
+        }
+
+        @include _620 {
+            height: auto;
+            padding: 50px 0;
+        }
+    }
+
+    &__first-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        gap: 15px;
+
+        @include _1024 {
+            display: block;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text-box {
+        max-width: 650px;
+        width: 100%;
+
+        @include _1024 {
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        font-size: clamp(1.75rem, 1.3099rem + 1.4085vw, 3rem);
+        @include Arimo-700;
+        margin-bottom: 25px;
+    }
+
+    &__slogan {
+        @include Arimo-500;
+        color: #98A1A2;
+    }
+
+    &__small-img-box {
+        max-width: 420px;
+        width: 100%;
+
+        @include _1024 {
+            max-width: 100%;
+            display: flex;
+        }
+
+        @include _767 {
+            display: none;
+        }
+    }
+
+    &__small-img {
+        max-width: 420px;
+        width: 100%;
+        object-fit: cover;
+
+        @include _1024 {
+            margin-left: auto;
+        }
+    }
+
+    &__second-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include _890 {
+            display: block;
+        }
+    }
+
+    &__box-btn {
+        width: 60%;
+        display: flex;
+        gap: 24px;
+        align-self: flex-start;
+        margin-top: 80px;
+
+        @include _890 {
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+    &__big-img-box {
+        align-self: flex-end;
+
+        @include _620 {
+            margin-top: 50px;
+        }
+    }
+
+    &__big-img {
+        max-width: 750px;
+        width: 100%;
+        object-fit: cover;
+        transform: translateY(80px);
+
+        @include _890 {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @include _620 {
+            transform: translateY(0);
+        }
+    }
+
+    .subhed--one {
+        height: 100vh;
+
+        @include _767 {
+            height: auto;
+            padding: 50px 0;
+        }
+
+        .subhed__wrapper {
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            align-items: center;
+
+            @include _1200 {
+                flex-direction: column;
+            }
+
+            @include _767 {
+                height: auto;
+            }
+
+            .subhed__big-img-box {
+                align-self: center;
+                margin-bottom: 5px;
+            }
+
+            .subhed__big-img-box>.subhed__big-img {
+                transform: translateY(0);
+
+                @include _890 {
+                    max-width: 750px;
+                }
+            }
+        }
+
+        .subhed__info {
+            max-width: 600px;
+            width: 100%;
+
+            @include _1200 {
+                max-width: 100%;
+                padding-top: 125px;
+            }
+
+            @include _767 {
+                padding-top: 50px;
+            }
+
+            .subhed__box-btn {
+                width: 100%;
+            }
+        }
+    }
+}
