@@ -40,6 +40,12 @@
   }
 }
 
+@mixin _400 {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
 //Fonts family
 
 @mixin Arimo-700 {
