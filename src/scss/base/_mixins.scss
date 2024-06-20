@@ -1,0 +1,36 @@
+@mixin _1920 {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin _1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin _1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin _1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin _767 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+//Fonts family
+
+@mixin OpenSans-600 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 600;
+}
