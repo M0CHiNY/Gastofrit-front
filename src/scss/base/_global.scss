@@ -3,7 +3,7 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: clamp(0.875rem, 0.831rem + 0.1408vw, 1rem);
   line-height: 1.15;
   height: 100%;
   @include Arimo-400;
