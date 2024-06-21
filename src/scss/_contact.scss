@@ -1,0 +1,137 @@
+.contact {
+    margin: 50px 0 100px;
+
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        color: #1A171B;
+        gap: 10px;
+    }
+
+    &__address {
+        max-width: 590px;
+        width: 100%;
+    }
+
+    &__address-box {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__address-title {
+        position: relative;
+        @include Arimo-500;
+        font-size: 24px;
+        margin-bottom: 25px;
+        padding-left: 45px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &--trast {
+            &::before {
+                background-image: url('../images/content/contact/heart-partner.svg');
+            }
+        }
+
+        &--contact {
+            &::before {
+                background-image: url('../images/content/contact/postal-address.svg');
+            }
+        }
+
+        &--social {
+            &::before {
+                background-image: url('../images/content/contact/share-alt-square.svg');
+            }
+        }
+    }
+
+
+    &__address-connect {
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__address-communication {
+        position: relative;
+        padding-left: 40px;
+
+        span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 25px;
+            left: 0;
+            top: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &--phone-icon {
+            &::before {
+                background-image: url('../images/content/contact/solar_phone-linear.svg');
+            }
+        }
+
+        &--email-icon {
+            &::before {
+                background-image: url('../images/content/contact/mage_email.svg');
+            }
+        }
+    }
+
+
+    &__address-link {
+        color: #1A171B;
+        transition: color ease-in 0.3s;
+
+        &:hover {
+            color: #ccc;
+        }
+    }
+
+    &__address-social-list {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__address-link-social {
+        width: 25px;
+        height: 25px;
+    }
+
+    &__form {
+        position: relative;
+        background-image: url('../images/content/banners/form-bg.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 635px;
+        width: 100%;
+        padding: 60px 50px;
+        height: 800px;
+        z-index: 2;
+        transform: translateY(-80px);
+    }
+}
