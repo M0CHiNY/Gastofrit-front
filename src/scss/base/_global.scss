@@ -70,6 +70,14 @@ body {
     justify-content: center;
     background-color: #1A171B;
     margin: 0 auto;
+
+    @include _400 {
+      min-width: fit-content;
+    }
+  }
+
+  &--question-banner {
+    border-color: #1A171B;
   }
 }
 
