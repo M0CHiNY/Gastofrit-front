@@ -1,0 +1,78 @@
+.about-company {
+    padding: 100px 0;
+    @include _767 {
+        padding: 50px 0;
+    }
+    &-item__title {
+        background-color: $bacground-color;
+        // width: 50%;
+        max-width: 350px;
+        font-size: 24px;
+        @include Arimo-500;
+        padding: 11px 0;
+        padding-right: 11px;
+        margin-bottom: 25px;
+        box-shadow: -600px 0 0 $bacground-color, -300px 0 0 $bacground-color;
+        border-radius: 0px 8px 8px 0px;
+        @include _620 {
+            width: 80%;
+            font-size: 20px;
+        }
+        @include _400 {
+            width: 100%;
+            box-shadow: -600px 0 0 $bacground-color, -200px 0 0 $bacground-color;
+        }
+
+    }
+
+    &-item {
+        display: flex;
+        gap: 20px;
+        @include _1250 {
+            flex-direction: column;
+            column-gap: 20px;
+        }
+    }
+
+    &-item__box {
+        width: 50%;
+        @include _1250 {
+            width: 100%;
+        }
+        &.custom--width-100{
+            width: 100%;
+        }
+    }
+
+    &-item__description {
+        color: #1A171B;
+        @include Arimo-400;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    &-image {
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    &-image__inner {
+        width: 50%;
+        @include _1250 {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+
+    &-image.right {
+        margin-left: auto;
+    }
+
+    &-image.left {
+        margin-right: auto;
+    }
+
+    &-image.center {
+        margin: 0 auto;
+    }
+}

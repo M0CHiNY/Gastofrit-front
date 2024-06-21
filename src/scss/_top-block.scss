@@ -1,0 +1,51 @@
+.top-block {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    background-color: $bacground-color;
+    background-image: url('../images/footer/footer-bg.webp');
+    @include _1200{
+        padding-top: 50px;
+    }
+    &__wrapper {
+        width: 50%;
+        @include _1200 {
+            width: 100%; 
+        }
+    }
+}
+
+.top-block-breadcrumbs {
+    ul {
+        display: flex;
+        gap: 5px;
+    }
+
+    a {
+        color: white;
+    }
+    margin-bottom: 25px;
+
+}
+
+.top-block-title {
+    @include Arimo-700;
+    font-size: clamp(1.5625rem, 1.1444rem + 1.338vw, 2.75rem);
+    margin-bottom: 25px;
+
+}
+
+.top-block-description {
+    @include  Arimo-500;
+    color: #98A1A2;
+    margin-bottom: 25px;
+}
+
+.top-block-video {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #98A1A2;
+    span {
+        color: $title-color;
+    }
+}
