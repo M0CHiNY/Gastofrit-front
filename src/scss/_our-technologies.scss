@@ -1,0 +1,90 @@
+.our-technologies {
+    padding-bottom: 100px;
+
+    @include _1024 {
+        padding-bottom: 50px;
+    }
+}
+
+.our-technologies__wrap {
+    display: flex;
+    justify-content: center;
+    @include _1024 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.our-technologies__card {
+    position: relative;
+    max-width: 323px;
+    width: 100%;
+    height: 550px;
+    background-color: $btn-color;
+    overflow: hidden;
+
+    &:hover .our-technologies__banner {
+        transform: scale(1.1);
+    }
+}
+
+.our-technologies__card--first {
+    &:hover .our-technologies__banner {
+        transform: scale(1);
+    }
+
+    .our-technologies__banner {
+        max-width: 188px;
+        width: 100%;
+        height: 72px;
+        object-fit: cover;
+        margin: 15px 15px 0 auto;
+    }
+
+    .our-technologies__info {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        opacity: 1;
+        background-color: transparent;
+        padding: 20px 12px 12px;
+    }
+
+    .our-technologies__descr {
+        font-size: 24px;
+        @include Arimo-500;
+        color: #000;
+    }
+}
+
+.our-technologies__banner {
+    max-width: 323px;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.our-technologies__info {
+    position: absolute;
+    width: 100%;
+    height: 170px;
+    background-color: #1A171BBF;
+    opacity: 0.9;
+    bottom: 0;
+    padding: 20px 12px 12px;
+}
+
+.our-technologies__title-link {
+    display: block;
+    @include Arimo-500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #fff;
+
+    &:hover {
+        color: $btn-color;
+    }
+}
