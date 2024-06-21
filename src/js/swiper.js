@@ -5,10 +5,13 @@ import Swiper from 'swiper/bundle';
 
 const swiper = new Swiper('.mySwiper', {
   // Optional parameters
+  spaceBetween: 20,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
   loop: true,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
