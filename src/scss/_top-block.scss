@@ -3,13 +3,16 @@
     padding-bottom: 50px;
     background-color: $bacground-color;
     background-image: url('../images/footer/footer-bg.webp');
-    @include _1200{
+
+    @include _1200 {
         padding-top: 50px;
     }
+
     &__wrapper {
         width: 50%;
+
         @include _1200 {
-            width: 100%; 
+            width: 100%;
         }
     }
 }
@@ -23,6 +26,7 @@
     a {
         color: white;
     }
+
     margin-bottom: 25px;
 
 }
@@ -35,17 +39,55 @@
 }
 
 .top-block-description {
-    @include  Arimo-500;
+    @include Arimo-500;
     color: #98A1A2;
     margin-bottom: 25px;
 }
 
-.top-block-video {
+.top-block-video a {
     display: flex;
     align-items: center;
     gap: 15px;
     color: #98A1A2;
+
     span {
         color: $title-color;
+    }
+}
+
+
+.top-block-video {
+    .btn-call {
+        // background: #38a3fd;
+        // border: 2px solid #38a3fd;
+        border-radius: 50%;
+        box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
+        width: 50px;
+        height: 50px;
+       
+      
+     
+  
+        transition: .3s;
+        animation: hoverWave linear 1s infinite;
+
+    }
+
+    @keyframes hoverWave {
+        0% {
+            box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2)
+        }
+
+        40% {
+            box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2)
+        }
+
+        80% {
+            box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067)
+        }
+
+        100% {
+            box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0.0)
+        }
     }
 }
