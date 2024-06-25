@@ -1,0 +1,64 @@
+.service-main-content {
+    color: #1A171B;
+    padding: 50px 0;
+    @include _890 {
+        padding: 30px 0;
+    }
+
+    p {
+        padding-bottom: 15px;
+    }
+
+    ul {
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    li {
+        padding-bottom: 15px;
+        list-style: disc;
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 25px;
+        @include Arimo-600;
+    }
+
+
+    /* Основні розміри заголовків з адаптацією */
+    h1 {
+        font-size: clamp(2.5rem, 2.1111rem + 1.3333vw, 3.75rem);
+        /* 48px */
+    }
+
+    h2 {
+        font-size: clamp(1.875rem, 1.4789rem + 1.2676vw, 3rem);
+        /* 36px */
+    }
+
+    h3 {
+        font-size: clamp(1.5625rem, 1.2967rem + 0.987vw, 2.5rem);
+        /* 30px */
+    }
+
+    h4 {
+        font-size: clamp(1.25rem, 1.1111rem + 0.7111vw, 1.875rem);
+        /* 24px */
+    }
+
+    h5 {
+        font-size: clamp(1rem, 0.9444rem + 0.4444vw, 1.25rem);
+        /* 20px */
+    }
+
+    h6 {
+        font-size: clamp(0.875rem, 0.8333rem + 0.2444vw, 1rem);
+        /* 16px */
+    }
+}

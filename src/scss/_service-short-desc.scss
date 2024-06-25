@@ -1,0 +1,68 @@
+.brief-desc-service {
+    padding: 50px 0;
+
+    @include _890 {
+        padding: 30px 0;
+    }
+
+    &__items {
+        display: flex;
+        gap: 50px;
+
+        @include _890 {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__item-title {
+        font-size: clamp(1.25rem, 1.162rem + 0.2817vw, 1.5rem);
+        margin-bottom: 25px;
+    }
+
+    &__item-title,
+    &__item-content {
+        @include Arimo-500;
+        color: #1A171B;
+    }
+
+    &__item {
+        height: fit-content;
+
+    }
+
+    &__item,
+    &__wrapper-img {
+        width: 50%;
+
+        @include _890 {
+            width: 100%;
+
+        }
+    }
+
+    &__wrapper-img {
+        position: relative;
+        margin-bottom: 190px;
+
+        @include _1200 {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        position: absolute;
+        top: -170px;
+
+        @include _1024 {
+            position: unset;
+            top: 0px;
+        }
+
+    }
+}
