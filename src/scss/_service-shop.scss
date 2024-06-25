@@ -1,0 +1,26 @@
+.service-shop {
+    padding: 50px 0;
+    @include _1200 {
+        padding: 30px 0;
+    }
+    &__title {
+        font-size: 24px;
+        color: #1A171B;
+        margin-bottom: 25px;
+    }
+
+    &__shortcode {
+        color: #1A171B;
+        margin-bottom: 50px;
+        @include _1200 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__btn {
+        background: #1A171B;
+        color:white;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}

@@ -5,13 +5,14 @@
     background-image: url('../images/footer/footer-bg.webp');
 
     @include _1200 {
-        padding-top: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     &__wrapper {
         width: 50%;
 
-        @include _1200 {
+        @include _1024{
             width: 100%;
         }
     }
@@ -58,16 +59,10 @@
 
 .top-block-video {
     .btn-call {
-        // background: #38a3fd;
-        // border: 2px solid #38a3fd;
         border-radius: 50%;
         box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
         width: 50px;
         height: 50px;
-       
-      
-     
-  
         transition: .3s;
         animation: hoverWave linear 1s infinite;
 
