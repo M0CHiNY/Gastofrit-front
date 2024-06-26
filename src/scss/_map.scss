@@ -1,0 +1,61 @@
+.map {
+    background-image: url('../images/content/contact/map-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 45px 0;
+    margin-bottom: 100px;
+    height: fit-content;
+
+    @include _1024 {
+        margin-bottom: 50px;
+    }
+}
+
+.map__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px 15px;
+
+    @include _1024 {
+        flex-direction: column;
+    }
+}
+
+.map__box {
+    max-width: 635px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: red;
+    height: 300px;
+
+    @include _1024 {
+        margin: 0 auto;
+    }
+}
+
+.map__info {
+    max-width: 100%;
+    width: 100%;
+}
+
+.map__title {
+    margin-bottom: 25px;
+    text-transform: none;
+    text-align: left;
+}
+
+.map__descr {
+    max-width: 510px;
+    margin-bottom: 50px;
+}
+
+.map-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @include _400 {
+        justify-content: center;
+    }
+}

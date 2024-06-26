@@ -12,7 +12,7 @@
     &__wrapper {
         width: 50%;
 
-        @include _1024{
+        @include _1024 {
             width: 100%;
         }
     }
@@ -33,6 +33,7 @@
 }
 
 .top-block-title {
+    text-transform: uppercase;
     @include Arimo-700;
     font-size: clamp(1.5625rem, 1.1444rem + 1.338vw, 2.75rem);
     margin-bottom: 25px;
@@ -42,7 +43,11 @@
 .top-block-description {
     @include Arimo-500;
     color: #98A1A2;
-    margin-bottom: 25px;
+    margin: 0 30px 25px 0;
+
+    @include _1024 {
+        margin-right: 0;
+    }
 }
 
 .top-block-video a {
