@@ -1,0 +1,128 @@
+.instructions {
+    padding: 50px 0;
+
+    @include _1024 {
+        padding: 25px 0;
+    }
+}
+
+.instructions__title {
+    color: #1A171B;
+    margin-bottom: 25px;
+}
+
+.instructions__descr {
+    text-align: center;
+    color: #1A171B;
+    margin-bottom: 50px;
+}
+
+.tabs {
+    padding: 40px 0;
+    background-image: url('../images/content/banners/tabs-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: fit-content;
+    max-width: 100%;
+    width: 100%;
+}
+
+.tabs__wrap {
+    display: flex;
+    gap: 20px;
+
+    @include _767 {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.tabs__head {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 310px;
+    width: 100%;
+
+    @include _767 {
+        max-width: 100%;
+    }
+}
+
+.tabs__item {
+    @include Arimo-600;
+    font-size: 18px;
+    background-color: #fff;
+    max-width: 310px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1A171B;
+    padding: 15px 10px;
+    border-radius: 8px;
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+
+    @include _767 {
+        max-width: 100%;
+    }
+}
+
+.tabs__item.tab-active {
+    background-color: $btn-color;
+}
+
+.tabs__content {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    @include _620 {
+        justify-content: center;
+    }
+
+    @include _475 {
+        gap: 20px 10px;
+    }
+}
+
+.tabs__content.hidden {
+    display: none
+}
+
+.tabs__docs {
+    display: block;
+    max-width: 170px;
+    width: 100%;
+
+    @include _475 {
+        max-width: 160px;
+    }
+
+}
+
+.tabs__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease-in, fill 0.3s ease-in;
+
+    &:hover span {
+        color: $btn-color;
+    }
+
+    &:hover svg path {
+        fill: $btn-color;
+    }
+}
+
+.tabs__link span {
+    color: #fff;
+    @include Arimo-500;
+    margin-top: 15px;
+    text-align: center;
+}
