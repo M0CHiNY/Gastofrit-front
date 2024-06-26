@@ -1,6 +1,10 @@
 .contact {
     margin: 50px 0 100px;
 
+    @include _1024 {
+        margin-bottom: 50px;
+    }
+
 
     &__wrap {
         position: relative;
@@ -8,14 +12,30 @@
         justify-content: space-between;
         color: #1A171B;
         gap: 10px;
+
+        @include _1024 {
+            display: block;
+        }
     }
 
     &__address {
-        max-width: 590px;
+        max-width: 50%;
         width: 100%;
+
+        @include _1024 {
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
     }
 
     &__address-box {
+        max-width: 590px;
+        width: 100%;
+
+        @include _1024 {
+            max-width: 100%;
+        }
+
         &:not(:last-child) {
             margin-bottom: 50px;
         }
@@ -65,6 +85,12 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        gap: 25px 10px;
+        flex-wrap: wrap;
+
+        @include _400 {
+            margin-left: 30px;
+        }
     }
 
     &__address-communication {
@@ -104,21 +130,44 @@
 
     &__address-link {
         color: #1A171B;
-        transition: color ease-in 0.3s;
+        transition: all ease-in 0.3s;
+        @include Arimo-700;
+        font-size: 16px;
 
         &:hover {
-            color: #ccc;
+            color: #8B0000;
         }
     }
 
     &__address-social-list {
         display: flex;
         gap: 15px;
+
+        @include _400 {
+            margin-left: 30px;
+        }
     }
 
     &__address-link-social {
-        width: 25px;
-        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        transition: all 0.3s ease-in;
+
+        svg {
+            width: 32px;
+            height: 32px;
+
+            path {
+                transition: transform 0.3s ease-in;
+            }
+        }
+
+        &:hover svg path {
+            transform: scale(0.9);
+        }
     }
 
     &__form {
@@ -132,6 +181,17 @@
         padding: 60px 50px;
         height: 800px;
         z-index: 2;
-        transform: translateY(-80px);
+        margin-top: -160px;
+        border-radius: 8px;
+
+        @include _1024 {
+            margin: 0 auto;
+            max-width: calc(100% - 30px);
+        }
+
+        @include _767 {
+            max-width: 100%;
+            padding: 30px 20px;
+        }
     }
 }
