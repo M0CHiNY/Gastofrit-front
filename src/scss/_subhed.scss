@@ -1,16 +1,10 @@
 .subhed {
-    height: calc(100vh - 200px);
     background-image: url('../images/content/subhed/bg-main.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
-    @include _620 {
-        height: auto;
-    }
-
     &__wrap {
-        height: calc(100vh - 200px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -20,8 +14,7 @@
             justify-content: space-around;
         }
 
-        @include _620 {
-            height: auto;
+        @include _767 {
             padding: 50px 0;
         }
     }
@@ -84,32 +77,22 @@
         }
     }
 
-    &__second-block {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include _890 {
-            display: block;
-        }
-    }
-
     &__box-btn {
-        width: 60%;
+        margin-top: 50px;
         display: flex;
         gap: 24px;
-        align-self: flex-start;
-
-        @include _890 {
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            margin-top: 40px;
-        }
+        flex-wrap: wrap;
     }
 
+    &__second-block {
+        display: flex;
+        height: fit-content;
+    }
+
+
     &__big-img-box {
-        align-self: flex-end;
+        margin-left: auto;
+        max-height: 480px;
 
         @include _620 {
             margin-top: 50px;
@@ -117,22 +100,22 @@
     }
 
     &__big-img {
+        display: block;
         max-width: 750px;
         width: 100%;
         object-fit: cover;
-        transform: translateY(80px);
+        margin-bottom: -80px;
 
         @include _890 {
             max-width: 600px;
-            margin: 0 auto;
         }
 
-        @include _620 {
-            transform: translateY(0);
+        @include _767 {
+            margin-bottom: 0;
         }
     }
 
-    .subhed--one {
+    &--one {
         height: 100vh;
 
         @include _767 {
